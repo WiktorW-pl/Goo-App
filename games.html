@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="/img/main-logo.png">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <title>Goo App</title>
@@ -73,9 +75,9 @@
         </div>
         <nav>
             <ul class="nav-list">
-                <li class="nav-list__element">Games</li>
-                <li class="nav-list__element nav-list__element--active">Tools</li>
-                <li class="nav-list__element">Information</li>
+                <li class="nav-list__element" id="games-games">Games</li>
+                <li class="nav-list__element nav-list__element--active" id="games-tools">Tools</li>
+                <li class="nav-list__element" id="games-info">Information</li>
             </ul>
         </nav>
     </header>
@@ -151,4 +153,5 @@
         </div>
     </div>
 </body>
+<script src="./js/games.js"></script>
 </html>
