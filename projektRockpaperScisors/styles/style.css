@@ -1,0 +1,197 @@
+body {
+  background-color: #232323;
+  color: #fff;
+  font-family: Fira Code;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo .logo__svg {
+  margin-top: 30px;
+  margin-left: 20px;
+  max-width: 100%;
+}
+
+.nav-list {
+  max-width: 100%;
+  list-style: none;
+  display: flex;
+  margin-right: 10px;
+  height: 80px;
+  transform: translateY(-70px);
+}
+.nav-list__element {
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  font-size: 18px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav-list__element--active {
+  position: absolute;
+  left: -60px;
+  height: 100px;
+  line-height: 60px;
+}
+.nav-list__element:hover {
+  background-color: #ffffff;
+  color: #232323;
+}
+.nav-list__element:nth-child(3) {
+  border-left: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: -150px 180px 0px 180px;
+}
+.title__icon {
+  width: 121px;
+  height: 121px;
+}
+.title__text {
+  font-family: Fira Code;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -8px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+.app .app-container {
+  border: 7px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  width: 1060px;
+  height: 375px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.app__option {
+  border: 7px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  width: 151px;
+  height: 181px;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.app__option .option__img {
+  width: 96px;
+  height: 130px;
+}
+.app__option .scissors {
+  height: 161px;
+  width: 90px;
+}
+.app .btn {
+  position: absolute;
+  top: 480px;
+  width: 155px;
+  height: 50px;
+  border: none;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 7.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.app .btn:hover {
+  background-color: #666666;
+  color: #fff;
+}
+
+.statistics {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.statistics .summary {
+  width: 674px;
+  height: 324px;
+  border: 7px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  text-align: center;
+  margin-right: 60px;
+}
+.statistics .summary__title {
+  font-size: 36px;
+  line-height: 16px;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.statistics .summary .selection {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 16px;
+  margin: 60px;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+.statistics .summary__game-winner {
+  font-size: 24px;
+  line-height: 6px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.statistics .stats {
+  width: 330px;
+  height: 324px;
+  border: 7px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  text-align: center;
+}
+.statistics .stats__title {
+  font-size: 36px;
+  line-height: 16px;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.statistics .stats .number {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 46px;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+
+.taken {
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,84 @@
+$main-color: #232323;
+body{
+    background-color: $main-color;
+    color: #fff;
+    font-family: Fira Code;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo .logo__svg{
+    width: 90%;
+    margin-left: 15px;
+}
+ .nav-list{
+    max-width: 100%;
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+    height: 80px;
+    transform: translateY(-65px);
+     &__element{
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+        font-size: 18px;
+        line-height: 46px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+       &--active{
+           position: absolute;
+           left: -60px;
+           height: 100px;
+           line-height: 60px;
+        }
+    }
+    &__element:hover{
+        background-color: #ffffff;
+        color: $main-color;
+
+    }
+    &__element:nth-child(3){
+        border-left: none;
+    }
+}
+.content{
+    width: 100%;
+    transform: translateX(400px);
+}
+.app{
+    border: #fff 7px solid;
+    padding: 20px;
+    width: 700px;
+    height: auto;
+}
+.task{
+    height: 50px;
+    margin-top: 20px;
+    &__input{
+        width: 80%;
+        height: 100%;
+        font-family: Fira Code;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: -1.5px;
+    }
+    &__checkbox{
+        transform: translateY(10px);
+        width: 10%;
+        height: 50%;
+    }
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}

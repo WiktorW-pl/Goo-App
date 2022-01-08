@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="/img/main-logo.png">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Goo App</title>
 </head>
 <body>
@@ -75,83 +73,42 @@
         </div>
         <nav>
             <ul class="nav-list">
-                <li class="nav-list__element" id="games-games">Games</li>
-                <li class="nav-list__element nav-list__element--active" id="games-tools">Tools</li>
-                <li class="nav-list__element" id="games-info">Information</li>
+                <li class="nav-list__element" id="tools-games">Games</li>
+                <li class="nav-list__element nav-list__element--active" id="tools-tools">Tools</li>
+                <li class="nav-list__element" id="tools-info">Information</li>
             </ul>
         </nav>
     </header>
-    <div class="content">
-        <div class="app">
-            <h1 class="app__title">TIC-TAC-TOE</h1>
-            <p class="app__text">Basic to-do aplication written in vanilla javascript</p>
-            <button class="app__button">GET STARTED</button>
-            <svg class="app__icon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_i_8_38)">
-                <path d="M80 0H10C4.5 0 0 4.5 0 10V80C0 85.5 4.5 90 10 90H80C85.5 90 90 85.5 90 80V10C90 4.5 85.5 0 80 0ZM15 20H40V27.5H15V20ZM80 80H10L80 10V80ZM57.5 65V75H65V65H75V57.5H65V47.5H57.5V57.5H47.5V65H57.5Z" fill="white"/>
-                </g>
-                <defs>
-                <filter id="filter0_i_8_38" x="0" y="0" width="90" height="94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="4"/>
-                <feGaussianBlur stdDeviation="2"/>
-                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_8_38"/>
-                </filter>
-                </defs>
-            </svg>                
-            <p class="app__view-code">View code</p>
+    <div class="title">
+        <div class="title__icon">
+            <img src="img/img-options.png" alt="" class="title__icon title__icon-img">
         </div>
-        <div class="app">
-            <h1 class="app__title">AIM TRAINER</h1>
-            <p class="app__text">Basic to-do aplication written in vanilla javascript</p>
-            <button class="app__button">GET STARTED</button>
-            <svg class="app__icon" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_i_8_30)">
-                <path d="M106.667 16H101.333V5.33337H90.6666V16H37.3333V5.33337H26.6666V16H21.3333C15.4666 16 10.6666 20.8 10.6666 26.6667V112C10.6666 117.867 15.4666 122.667 21.3333 122.667H106.667C112.533 122.667 117.333 117.867 117.333 112V26.6667C117.333 20.8 112.533 16 106.667 16ZM106.667 112H21.3333V42.6667H106.667V112Z" fill="white"/>
-                </g>
-                <defs>
-                <filter id="filter0_i_8_30" x="0" y="0" width="128" height="132" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="4"/>
-                <feGaussianBlur stdDeviation="2"/>
-                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_8_30"/>
-                </filter>
-                </defs>
-            </svg>                
-            <p class="app__view-code">View code</p>
-        </div>
-        <div class="app">
-            <h1 class="app__title" style="font-size: 35px; letter-spacing: 0.5px;">PAPER, SCISSORS, ROCK</h1>
-            <p class="app__text">Basic to-do aplication written in vanilla javascript</p>
-            <button class="app__button" id="game-3">GET STARTED</button>
-            <svg class="app__icon" width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_i_8_34)">
-                <path d="M82.8 0H9.2C4.14 0 0.046 4.14 0.046 9.2L0 92L18.4 73.6H82.8C87.86 73.6 92 69.46 92 64.4V9.2C92 4.14 87.86 0 82.8 0ZM32.2 41.4H23V32.2H32.2V41.4ZM50.6 41.4H41.4V32.2H50.6V41.4ZM69 41.4H59.8V32.2H69V41.4Z" fill="white"/>
-                </g>
-                <defs>
-                <filter id="filter0_i_8_34" x="0" y="0" width="92" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="4"/>
-                <feGaussianBlur stdDeviation="2"/>
-                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_8_34"/>
-                </filter>
-                </defs>
-            </svg>                
-            <p class="app__view-code">View code</p>
+        <h1 class="title__text">Rock, paper, scissors</h1>
+    </div>
+    <div class="app">
+        <div class="app-container">
+            <div class="app__option"><img src="img/rock.png" alt="rock" class="option__img"></div>
+            <div class="app__option"><img src="img/paper.png" alt="paper" class="option__img"></div>
+            <div class="app__option"><img src="img/scissors.png" alt="scissors" class="option__img scissors"></div>
+            <button class="btn">Play!</button>
         </div>
     </div>
+    <div class="statistics">
+        <div class="statistics__summary summary">
+            <h1 class="summary__title">Game results</h1>
+            <h2 class="summary__player-selection selection">Player's choice </h2>
+            <h2 class="summary__computer-selection selection">Computer's choice</h2>
+            <h2 class="summary__game-winner">Game winner</h2>
+        </div>
+        <div class="statistics__stats stats">
+            <h1 class="stats__title">Statistics</h1>
+            <h2 class="stats__number-of-games number">Number of games played:</h2>
+            <h2 class="stats__number-of-wins number">Number of games wins:</h2>
+            <h2 class="stats__number-of-losses number">Number of games losses:</h2>
+            <h2 class="stats__number-of-draws number">Number of games draws:</h2>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
-<script src="./js/games.js"></script>
 </html>
