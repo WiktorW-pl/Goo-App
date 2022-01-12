@@ -48,14 +48,15 @@ header {
   text-transform: uppercase;
   cursor: pointer;
 }
-.nav-list__element--active {
-  position: absolute;
-  left: -60px;
-  height: 100px;
-  line-height: 60px;
+.nav-list__link {
+  text-decoration: none;
+  color: #fff;
 }
 .nav-list__element:hover {
   background-color: #ffffff;
+  color: #232323;
+}
+.nav-list__element:hover .nav-list__link {
   color: #232323;
 }
 .nav-list__element:nth-child(3) {
@@ -72,7 +73,6 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -45%);
-  display: none;
 }
 
 .app {
@@ -148,7 +148,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -5%);
+  transform: translate(-50%, -50%);
   text-align: center;
   padding: 30px;
   display: flex;

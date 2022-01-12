@@ -5,3 +5,7 @@ A website with my library of simple vanilla javaScript projects. <br />
 ## 7.01.2022:
 - Added fully working navigation with some animations in TweenMax
 - Added animations for page redirecting
+## 8.01.2022:
+- I added first game for games subpage
+## 12.01.2022:
+- I installed parcel, gsap, and highway.js to navigate and redirect between pages more efficiently

@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/img/main-logo.png">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.scss">
     <title>Goo App</title>
 </head>
 <body>
@@ -75,13 +74,14 @@
         </div>
         <nav>
             <ul class="nav-list">
-                <li class="nav-list__element" id="tools-games">Games</li>
-                <li class="nav-list__element nav-list__element--active" id="tools-tools">Tools</li>
-                <li class="nav-list__element" id="tools-info">Information</li>
+                <li class="nav-list__element"><a class="nav-list__link" href="games.html">Games</a></li>
+                <li class="nav-list__element"><a class="nav-list__link" href="index.html">Tools</a></li>
+                <li class="nav-list__element"><a class="nav-list__link" href="info.html">Information</a></li>
             </ul>
         </nav>
     </header>
-    <div class="content">
+    <main data-router-wrapper>
+    <div class="content" data-router-view="home">
         <div class="app">
             <h1 class="app__title">Calculator</h1>
             <p class="app__text">Basic to-do aplication written in vanilla javascript</p>
@@ -152,6 +152,7 @@
             <p class="app__view-code">View  code</p>
         </div>
     </div>
-    <script src="script.js"></script>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
