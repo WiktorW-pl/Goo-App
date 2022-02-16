@@ -1,0 +1,208 @@
+$main-color: #232323;
+body{
+    background-color: $main-color;
+    color: #fff;
+    font-family: Fira Code;
+    overflow: hidden;
+}
+.content-todo{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.content__icon{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.content__title{
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+.info{
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 20px;
+}
+.cursor{
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    opacity: 0;
+    transition: 2s;
+}
+.app-todo{
+    width: 600px;
+    height: 690px;
+    border-radius: 20px;
+    border: 7px #fff solid;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.task{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+}
+.task__input{
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 50px;
+    color: #232323;
+    resize: none;
+    text-align: center;
+    background-color: #fff;
+}
+.task__checkbox{
+    width: 22px;
+    height: 22px;
+    margin: 10px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    background-color: $main-color;
+    border: 7px solid #fff;
+    border-radius: 20px;
+    min-width: 300px;
+    height: 60px;
+    padding: 5px;
+    transform: translateY(-55px);
+}
+.change-color{
+    transform: translateY(3px);
+}
+.add-btn{
+    transform: translateY(3px);
+}
+.remove-btn{
+    transform: translateY(7px);
+}
+.side-note-panel{
+    position: absolute;
+    bottom: 20px;
+}
+.add-note{
+    width: 180px;
+    height: 40px;
+    border: 3px solid #fff;
+    color: #fff;
+    padding: 10px;
+    background-color: #232323;
+    font-size: 20px;  
+    margin-right: 10px;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;  
+    font-family: Fira Code;
+}
+.remove-note{
+    width: 200px;
+    height: 40px;
+    border: 3px solid #fff;
+    color: #fff;
+    padding: 10px;
+    background-color: #232323;
+    font-size: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    line-height: 1px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: Fira Code;
+}
+.color{
+    width: 20px;
+    height: 56px;
+    margin-left: 1px;
+    transform: translateX(-16px);
+    border-right: 5px solid;
+}
+.high:hover, .medium:hover, .low:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border: #232323 3px solid;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+    cursor: pointer;
+}
+@font-face {
+    font-family: 'Reenie Beanie';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/reeniebeanie/v14/z7NSdR76eDkaJKZJFkkjuvWxXPq1qw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+.note{
+    text-decoration:none;
+    color:#000;
+    background-color:#ffc;
+    display:block;
+    height: 150px;
+    width:10em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transition: transform .15s linear;
+    position: absolute;
+    border: 10px solid #ffc;
+    left: 20px;
+    top: 150px;
+    &__input{
+        font-family: 'Reenie Beanie';
+        font-size: 1.5rem;
+        background-color:#ffc;
+        border: none;
+        resize: none;
+        width: 100%;
+        height: 150px;
+    }
+    &__checkbox{
+        margin-top: 22px;
+        width: 15px;
+        height: 15px;
+    }
+}
+.taken{
+    background-color:#ffc;
+    opacity: 0.3;
+}
+.active{
+    opacity: 1;
+}
