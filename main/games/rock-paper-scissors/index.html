@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.scss">
+    <title>Goo App</title>
+</head>
+<body>
+   <main data-router-wrapper>
+    <div class="content" data-router-view="rock-paper-scissors">
+    <div class="title">
+        <div class="title__icon">
+            <img src="img/img-options.png" alt="" class="title__icon title__icon-img">
+        </div>
+        <h1 class="title__text">Rock, paper, scissors</h1>
+    </div>
+    <div class="app">
+        <div class="app-container">
+            <div class="app__option"><img src="img/rock.png" alt="rock" class="option__img"></div>
+            <div class="app__option"><img src="img/paper.png" alt="paper" class="option__img"></div>
+            <div class="app__option"><img src="img/scissors.png" alt="scissors" class="option__img scissors"></div>
+            <button class="btn">Play!</button>
+        </div>
+    </div>
+    <div class="statistics">
+        <div class="statistics__summary summary">
+            <h1 class="summary__title">Game results</h1>
+            <h2 class="summary__player-selection selection">Player's choice </h2>
+            <h2 class="summary__computer-selection selection">Computer's choice</h2>
+            <h2 class="summary__game-winner">Game winner</h2>
+        </div>
+        <div class="statistics__stats stats">
+            <h1 class="stats__title">Statistics</h1>
+            <h2 class="stats__number-of-games number">Number of games played:</h2>
+            <h2 class="stats__number-of-wins number">Number of games wins:</h2>
+            <h2 class="stats__number-of-losses number">Number of games losses:</h2>
+            <h2 class="stats__number-of-draws number">Number of games draws:</h2>
+        </div>
+    </div>
+    </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
