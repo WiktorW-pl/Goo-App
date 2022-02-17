@@ -28,7 +28,6 @@ header{
     max-width: 100%;
     list-style: none;
     display: flex;
-    margin-right: 10px;
     height: 80px;
     transform: translateY(-65px);
      &__element{
@@ -43,6 +42,10 @@ header{
         text-transform: uppercase;
         cursor: pointer;
         border-right: none;
+    }
+    &__element--active{
+        background-color: #fff;
+        color: #232323;
     }
     &__link{
         text-decoration: none;
@@ -67,6 +70,24 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -45%);
+    opacity: 0;
+}
+.content-games{
+    display: none;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    opacity: 0;
+}
+.content-info{
+    display: none;
+    flex-direction: column;
 }
 .app{
     border: 7px solid #fff;
