@@ -5,6 +5,45 @@ body{
     font-family: Fira Code;
     overflow: hidden;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo .logo__svg{
+    width: 90%;
+    margin-left: 15px;
+}
+.nav-list{
+    max-width: 100%;
+    list-style: none;
+    display: flex;
+    height: 80px;
+    transform: translateY(-65px);
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    z-index: 100;
+     &__element{
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+        font-size: 18px;
+        line-height: 46px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    &__element:hover{
+        background-color: #ffffff;
+        a:hover{
+            color: $main-color;
+        }
+
+    }
+}
 .content{
     min-width: 100%;
     position: absolute;
@@ -83,6 +122,7 @@ body{
         letter-spacing: 7.5px;
         text-transform: uppercase;
         cursor: pointer;
+        top: 270px;
     }
     .btn:hover{
         background-color: #666666;
@@ -152,4 +192,8 @@ body{
 }
 .taken{
     background-color: green;
+}
+a{
+    text-decoration: none;
+    color: #fff;
 }
