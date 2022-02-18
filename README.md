@@ -16,8 +16,8 @@
 
 ## How it's work?
 ### To-do app:
-![image](images/todoimg.JPG)
-### The application allows you to add tasks unlimitedly.
+![image](images/todoimg.JPG) 
+The application allows you to add tasks unlimitedly.
 <br> Additionally, the user can also 'stick' note's with any content. The sticky note can later be placed anywhere on the screen.
 <br> Any content that user creates is then saved in local storage.
 
