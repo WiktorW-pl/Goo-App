@@ -2,13 +2,16 @@ body {
   background-color: #232323;
   color: #fff;
   font-family: Fira Code;
-  overflow: hidden;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.hamburger, .hamburger-navigation {
+  display: none;
 }
 
 .logo .logo__svg {
@@ -73,10 +76,6 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
   opacity: 0;
 }
 
@@ -87,23 +86,13 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
   opacity: 0;
-}
-
-.content-info {
-  display: none;
-  flex-direction: column;
-  transform: translateY(140%);
 }
 
 .app {
   border: 7px solid #fff;
   height: 720px;
-  width: 480px;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,4 +188,273 @@ header {
 a {
   text-decoration: none;
   color: #232323;
+}
+
+@media only screen and (max-width: 1400px) {
+  #title-rock-paper-scissors {
+    font-size: 25px;
+    transform: translateY(10px);
+  }
+
+  .app {
+    max-width: 380px;
+  }
+  .app__title {
+    font-size: 44px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+  .app__text {
+    transform: translateY(-60px);
+  }
+  .app__button {
+    width: 202px;
+    height: 51px;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    color: #232323;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .hamburger {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .hamburger, .hamburger-navigation {
+    transition: transform 0.2s 0.1s ease-in-out;
+  }
+
+  .hamburger--active {
+    transform: translateX(-250px);
+  }
+
+  .hamburger__box {
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger__inner {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s 0.2s ease-in-out;
+  }
+
+  .hamburger__inner::before,
+.hamburger__inner::after {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    content: "";
+    left: 0;
+    transition: transform 0.3s 0.2s ease-in-out;
+  }
+
+  .hamburger__inner::before {
+    top: -10px;
+  }
+
+  .hamburger__inner::after {
+    top: 10px;
+  }
+
+  .hamburger--active .hamburger__inner {
+    background-color: transparent;
+  }
+
+  .hamburger--active .hamburger__inner::before {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger--active .hamburger__inner::after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .hamburger-navigation {
+    height: 100vh;
+    width: 250px;
+    background-color: #003478;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+  }
+
+  .hamburger-navigation--active {
+    transform: translateX(0px);
+  }
+
+  .hamburger-list {
+    list-style: none;
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  .hamburger-list__item {
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    width: 25%;
+    height: auto;
+  }
+
+  #title-rock-paper-scissors {
+    font-size: 19px;
+    transform: translateY(10px);
+  }
+
+  .content {
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+  }
+
+  .content-games {
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+  }
+
+  .app {
+    margin-top: 10px;
+    border: 7px solid #fff;
+    height: 400px;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .app__title {
+    font-size: 34px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+  .app__text {
+    transform: translateY(-60px);
+    display: none;
+  }
+  .app__button {
+    width: 202px;
+    height: 51px;
+    font-size: 17px;
+    line-height: 16px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #232323;
+  }
+  .app__icon {
+    width: 20%;
+    transform: translateY(-10px);
+  }
+  .app .app__view-code {
+    display: none;
+  }
+
+  .app:nth-child(odd) {
+    height: 400px;
+  }
+
+  .app:nth-child(1) {
+    border: 7px solid #fff;
+  }
+
+  .app:nth-child(3) {
+    border: 7px solid #fff;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .container-info {
+    height: 500px;
+    width: 900px;
+  }
+  .container-info__logo {
+    width: 30%;
+    transform: translateY(-30px);
+  }
+  .container-info__text {
+    font-size: 24px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #title-rock-paper-scissors {
+    font-size: 19px;
+    transform: translateY(10px);
+  }
+
+  .app {
+    max-width: 280px;
+  }
+  .app__title {
+    font-size: 34px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+  .app__text {
+    transform: translateY(-60px);
+  }
+  .app__button {
+    width: 202px;
+    height: 51px;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    color: #232323;
+  }
+
+  .container-info {
+    height: 500px;
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container-info {
+    height: 500px;
+    width: 300px;
+  }
+  .container-info__logo {
+    width: 30%;
+    transform: translateY(-30px);
+  }
+  .container-info__text {
+    font-size: 15px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }/*# sourceMappingURL=style.css.map */

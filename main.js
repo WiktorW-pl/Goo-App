@@ -6,6 +6,14 @@ const btnToGames = document.querySelector('#games-button');
 const btnToTools = document.querySelector('#tools-button');
 const btnToInfo = document.querySelector('#info-button');
 
+const hamburger = document.querySelector('.hamburger');
+const hamburgerNav = document.querySelector('.hamburger-navigation');
+const handleClick = () =>{
+    hamburger.classList.toggle('hamburger--active');
+    hamburgerNav.classList.toggle('hamburger-navigation--active');
+}
+hamburger.addEventListener('click', handleClick)
+
 const loadAnimation = () => {
     tl.fromTo(contentTools, {opacity: 0}, {opacity: 1, duration: 0.5});
     contentGames.style.display = "none";

@@ -74,6 +74,18 @@
                 
         </div>
         <nav>
+            <button class="hamburger">
+                <span class="hamburger__box">
+                    <span class="hamburger__inner"></span>
+                </span>
+            </button>
+            <div class="hamburger-navigation">
+             <ul class="hamburger-list">
+                 <li class="hamburger-list__item"><a>Tools</a></li>
+                 <li class="hamburger-list__item"><a>Games</a></li>
+                 <li class="hamburger-list__item"><a>Information</a></li>
+             </ul>
+            </div>
             <ul class="nav-list">
                 <li class="nav-list__element nav-list__element--active" id="tools-button">Tools</li>
                 <li class="nav-list__element" id="games-button">Games</li>
@@ -105,7 +117,7 @@
             </svg>                
             <p class="app__view-code">View code</p>
         </div>
-        <div class="app">
+        <div class="app" id="main-app">
             <h1 class="app__title">TO-DO</h1>
             <p class="app__text" style="transform: translateY(-85px);">Basic to-do aplication written in vanilla javascript</p>
             <button class="app__button" id="btn__todo"><a href="./tools/todo/todo.html">GET STARTED</a></button>
@@ -200,7 +212,7 @@
             <p class="app__view-code">View code</p>
         </div>
         <div class="app">
-            <h1 class="app__title" style="font-size: 35px; letter-spacing: 0.5px;">PAPER, SCISSORS, ROCK</h1>
+            <h1 class="app__title" id="title-rock-paper-scissors" >PAPER, SCISSORS, ROCK</h1>
             <p class="app__text">Basic to-do aplication written in vanilla javascript</p>
             <button class="app__button" id="game-3"><a href="games/rock-paper-scissors/index.html">GET STARTED</a></button>
             <svg class="app__icon" width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">

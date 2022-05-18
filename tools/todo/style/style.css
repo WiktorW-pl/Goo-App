@@ -216,7 +216,7 @@ header {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: rgb(255, 255, 255);
   border: #232323 3px solid;
 }
 
