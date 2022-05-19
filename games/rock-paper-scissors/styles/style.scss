@@ -519,7 +519,7 @@ a{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -25%);
+        transform: translate(-50%, -15%);
     }
     .title{
         display: flex;
@@ -592,16 +592,19 @@ a{
             height: 324px;
             margin-right: 0px;
             &__title{
-                font-size: 36px;
+                font-size: 26px;
             }
             .selection{
                 font-style: normal;
                 font-weight: normal;
-                font-size: 24px;
+                font-size: 14px;
                 line-height: 16px;
                 margin: 60px;
                 letter-spacing: -1.5px;
                 text-transform: uppercase;
+            }
+            &__game-winner{
+                font-size: 15px;
             }
         }
         .stats{ 

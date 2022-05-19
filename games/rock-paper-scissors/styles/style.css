@@ -533,7 +533,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -15%);
   }
 
   .title {
@@ -611,16 +611,19 @@ a {
     margin-right: 0px;
   }
   .statistics .summary__title {
-    font-size: 36px;
+    font-size: 26px;
   }
   .statistics .summary .selection {
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 14px;
     line-height: 16px;
     margin: 60px;
     letter-spacing: -1.5px;
     text-transform: uppercase;
+  }
+  .statistics .summary__game-winner {
+    font-size: 15px;
   }
   .statistics .stats {
     width: 330px;
