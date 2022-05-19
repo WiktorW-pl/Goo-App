@@ -89,6 +89,11 @@ header {
   opacity: 0;
 }
 
+#title-rock-paper-scissors {
+  font-size: 35px;
+  transform: translateY(10px);
+}
+
 .app {
   border: 7px solid #fff;
   height: 720px;
@@ -222,6 +227,7 @@ a {
     display: block;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 
   .nav-list {
@@ -288,15 +294,17 @@ a {
   .hamburger-navigation {
     height: 100vh;
     width: 250px;
-    background-color: #003478;
+    background-color: #000;
     position: absolute;
+    z-index: 100;
     top: 0;
-    left: 0;
-    transform: translateX(-250px);
+    right: 0;
+    transform: translateX(250px);
   }
 
   .hamburger-navigation--active {
     transform: translateX(0px);
+    display: block;
   }
 
   .hamburger-list {
@@ -306,6 +314,10 @@ a {
   }
   .hamburger-list__item {
     margin-bottom: 20px;
+  }
+  .hamburger-list__item a {
+    color: #fff;
+    cursor: pointer;
   }
 
   .logo {

@@ -6,6 +6,10 @@ const btnToGames = document.querySelector('#games-button');
 const btnToTools = document.querySelector('#tools-button');
 const btnToInfo = document.querySelector('#info-button');
 
+const hamburgerToTools = document.querySelector('.tools-hamburger');
+const hamburgerToGames = document.querySelector('.games-hamburger');
+const hamburgerToInfo = document.querySelector('.info-hamburger');
+
 const hamburger = document.querySelector('.hamburger');
 const hamburgerNav = document.querySelector('.hamburger-navigation');
 const handleClick = () =>{
@@ -67,3 +71,7 @@ const navigateToInfo = () =>{
 btnToGames.addEventListener('click', navigateToGames);
 btnToTools.addEventListener('click', navigateToTools);
 btnToInfo.addEventListener('click', navigateToInfo);
+
+hamburgerToTools.addEventListener('click', navigateToTools);
+hamburgerToGames.addEventListener('click', navigateToGames);
+hamburgerToInfo.addEventListener('click', navigateToInfo);
