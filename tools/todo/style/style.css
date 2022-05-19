@@ -2,7 +2,6 @@ body {
   background-color: #232323;
   color: #fff;
   font-family: Fira Code;
-  overflow: hidden;
 }
 
 header {
@@ -274,4 +273,179 @@ header {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+@media only screen and (max-width: 1500px) {
+  .logo .logo__svg {
+    width: 80%;
+    margin-left: 15px;
+  }
+
+  .content-todo {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-130px);
+  }
+
+  .app-todo {
+    width: 600px;
+    height: 650px;
+    border-radius: 20px;
+    border: 7px #fff solid;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .side-note-panel {
+    width: 300px;
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .add-note {
+    width: 180px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .remove-note {
+    width: 200px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1115px) {
+  .logo .logo__svg {
+    width: 50%;
+    margin-left: 15px;
+  }
+
+  .remove-note {
+    width: 170px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 1px;
+    letter-spacing: 0.2px;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .logo .logo__svg {
+    width: 40%;
+  }
+
+  .content-todo {
+    transform: translateY(-60px);
+  }
+
+  .side-note-panel {
+    width: 350px;
+    left: 0;
+    transform: translateX(50%);
+    position: absolute;
+    bottom: -150px;
+  }
+
+  .add-note {
+    width: 150px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1px;
+    letter-spacing: 0.2px;
+  }
+
+  .remove-note {
+    width: 170px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 1px;
+    letter-spacing: 0.2px;
+  }
+
+  .note {
+    top: 1000px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .logo .logo__svg {
+    width: 40%;
+  }
+
+  .content-todo {
+    transform: translateY(-60px);
+  }
+
+  .side-note-panel {
+    width: 350px;
+    left: 0;
+    transform: translateX(50%);
+    position: absolute;
+    bottom: -180px;
+  }
+
+  .add-note {
+    width: 150px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1px;
+    letter-spacing: 0.2px;
+  }
+
+  .remove-note {
+    width: 170px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 1px;
+    letter-spacing: 0.2px;
+  }
+
+  .app-todo {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 565px) {
+  .logo .logo__svg {
+    width: 40%;
+  }
+
+  .content-todo {
+    transform: translateY(-60px);
+  }
+
+  .side-note-panel {
+    width: 350px;
+    transform: translateX(30%);
+    bottom: -180px;
+  }
+
+  .add-note {
+    width: 150px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1px;
+    letter-spacing: 0.2px;
+  }
+
+  .remove-note {
+    width: 170px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 1px;
+    letter-spacing: 0.2px;
+  }
+
+  .app-todo {
+    width: 300px;
+  }
+
+  .buttons {
+    min-width: 150px;
+  }
 }/*# sourceMappingURL=style.css.map */
