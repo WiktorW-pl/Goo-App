@@ -10,6 +10,18 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border: #232323 3px solid;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+    cursor: pointer;
+}
 .logo .logo__svg{
     width: 90%;
     margin-left: 15px;
@@ -519,7 +531,7 @@ a{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -15%);
+        transform: translate(-50%, -5%);
     }
     .title{
         display: flex;

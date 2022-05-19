@@ -2,7 +2,6 @@ body {
   background-color: #232323;
   color: #fff;
   font-family: Fira Code;
-  overflow: hidden;
 }
 
 header {
@@ -11,8 +10,22 @@ header {
   align-items: center;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border: #232323 3px solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+  cursor: pointer;
+}
+
 .logo .logo__svg {
-  width: 90%;
+  width: 70%;
   margin-left: 15px;
 }
 
@@ -26,6 +39,10 @@ header {
   top: 35px;
   right: 10px;
   z-index: 100;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
 }
 .nav-list__element {
   border: 3px solid #FFFFFF;
@@ -47,32 +64,148 @@ header {
 }
 
 .content {
-  min-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -39%);
+  transform: translateY(-20%);
 }
 
 .title {
   display: flex;
   justify-content: center;
-  margin: -150px 180px 0px 180px;
+  align-items: center;
+  align-content: center;
+  transform: translateY(20px);
 }
-.title__icon {
-  width: 121px;
-  height: 121px;
+.title__img {
+  width: 71px;
+  height: 71px;
 }
 .title__text {
   font-family: Fira Code;
   font-style: normal;
   font-weight: normal;
   font-size: 64px;
-  line-height: 60px;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: -8px;
   text-transform: uppercase;
   margin-left: 20px;
+}
+
+.app {
+  margin: 0;
+  height: 650px;
+  max-width: 100%;
+  background-color: #232323;
+  border: 7px solid #fff;
+  border-radius: 30px;
+}
+
+.game-panel {
+  margin: 0;
+  height: 90px;
+  max-width: 100%;
+  background-color: #232323;
+  border: 7px solid #fff;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.game-panel__button {
+  border: none;
+  width: 202px;
+  height: 41px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-style: normal;
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 7.5px;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1180px) {
+  .logo .logo__svg {
+    display: none;
+  }
+
+  .content {
+    transform: translateY(2%);
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transform: translateY(-20px);
+  }
+  .title__img {
+    width: 71px;
+    height: 71px;
+  }
+  .title__text {
+    font-family: Fira Code;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+
+  .content {
+    transform: translateY(10%);
+  }
+
+  .app {
+    margin: 0;
+    height: 650px;
+    max-width: 100%;
+    background-color: #232323;
+    border: 7px solid #fff;
+    border-radius: 30px;
+  }
+
+  .game-panel {
+    margin: 0;
+    height: auto;
+    max-width: 100%;
+    background-color: #232323;
+    border: 7px solid #fff;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .game-panel__button {
+    border: none;
+    width: 202px;
+    height: 41px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-family: Fira Code;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 7.5px;
+    text-transform: uppercase;
+    color: #232323;
+    cursor: pointer;
+  }
+  .game-panel__item {
+    margin: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
