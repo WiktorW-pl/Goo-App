@@ -343,11 +343,7 @@ a {
   }
 
   .side-note-panel {
-    width: 350px;
-    left: 0;
-    transform: translateX(50%);
-    position: absolute;
-    bottom: -150px;
+    display: none;
   }
 
   .add-note {
@@ -374,18 +370,15 @@ a {
 @media only screen and (max-width: 700px) {
   .logo .logo__svg {
     width: 40%;
+    display: none;
   }
 
   .content-todo {
-    transform: translateY(-60px);
+    transform: translateY(80px);
   }
 
   .side-note-panel {
-    width: 350px;
-    left: 0;
-    transform: translateX(50%);
-    position: absolute;
-    bottom: -180px;
+    display: none;
   }
 
   .add-note {
@@ -412,16 +405,15 @@ a {
 @media only screen and (max-width: 565px) {
   .logo .logo__svg {
     width: 40%;
+    display: none;
   }
 
   .content-todo {
-    transform: translateY(-60px);
+    transform: translateY(80px);
   }
 
   .side-note-panel {
-    width: 350px;
-    transform: translateX(30%);
-    bottom: -180px;
+    display: none;
   }
 
   .add-note {
