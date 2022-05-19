@@ -542,6 +542,7 @@ a {
     margin: -150px 180px 0px 180px;
   }
   .title__icon {
+    display: none;
     width: 71px;
     height: 71px;
     margin-top: 10px;
@@ -558,6 +559,7 @@ a {
     letter-spacing: -2px;
     text-transform: uppercase;
     margin-left: 20px;
+    display: none;
   }
 
   .app {
@@ -593,24 +595,7 @@ a {
     height: 70px;
   }
   .app .btn {
-    position: absolute;
-    top: 480px;
-    width: 155px;
-    height: 50px;
-    border: none;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 7.5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    top: 270px;
-  }
-  .app .btn:hover {
-    background-color: #666666;
-    color: #fff;
+    top: 110px;
   }
 
   .statistics {
@@ -623,19 +608,10 @@ a {
   .statistics .summary {
     width: 374px;
     height: 324px;
-    border: 7px solid #FFFFFF;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    text-align: center;
     margin-right: 0px;
   }
   .statistics .summary__title {
     font-size: 36px;
-    line-height: 16px;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
-    font-weight: normal;
   }
   .statistics .summary .selection {
     font-style: normal;
@@ -644,12 +620,6 @@ a {
     line-height: 16px;
     margin: 60px;
     letter-spacing: -1.5px;
-    text-transform: uppercase;
-  }
-  .statistics .summary__game-winner {
-    font-size: 24px;
-    line-height: 6px;
-    letter-spacing: 2.5px;
     text-transform: uppercase;
   }
   .statistics .stats {
@@ -661,20 +631,5 @@ a {
     border-radius: 30px;
     text-align: center;
     margin-top: 20px;
-  }
-  .statistics .stats__title {
-    font-size: 36px;
-    line-height: 16px;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-  .statistics .stats .number {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 46px;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
   }
 }/*# sourceMappingURL=style.css.map */

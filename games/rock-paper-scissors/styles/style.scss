@@ -526,6 +526,7 @@ a{
         justify-content: center;
         margin: -150px 180px 0px 180px;
         &__icon{
+            display: none;
             width: 71px;
             height: 71px;
             margin-top: 10px;
@@ -542,6 +543,7 @@ a{
             letter-spacing: -2px;
             text-transform: uppercase;
             margin-left: 20px;
+            display: none;
         }
     }
     .app{
@@ -576,24 +578,7 @@ a{
             }
         }
         .btn{
-            position: absolute;
-            top: 480px;
-            width: 155px;
-            height: 50px;
-            border: none;
-            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 16px;
-            text-align: center;
-            letter-spacing: 7.5px;
-            text-transform: uppercase;
-            cursor: pointer;
-            top: 270px;
-        }
-        .btn:hover{
-            background-color: #666666;
-            color: #fff;
+            top: 110px;
         }
     }
     .statistics{
@@ -605,18 +590,9 @@ a{
         .summary{
             width: 374px;
             height: 324px;
-            border: 7px solid #FFFFFF;
-            box-sizing: border-box;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 30px;
-            text-align: center;
             margin-right: 0px;
             &__title{
                 font-size: 36px;
-                line-height: 16px;
-                letter-spacing: -1.5px;
-                text-transform: uppercase;
-                font-weight: normal;
             }
             .selection{
                 font-style: normal;
@@ -625,12 +601,6 @@ a{
                 line-height: 16px;
                 margin: 60px;
                 letter-spacing: -1.5px;
-                text-transform: uppercase;
-            }
-            &__game-winner{
-                font-size: 24px;
-                line-height: 6px;
-                letter-spacing: 2.5px;
                 text-transform: uppercase;
             }
         }
@@ -643,21 +613,6 @@ a{
             border-radius: 30px;
             text-align: center;
             margin-top: 20px;
-            &__title{
-                font-size: 36px;
-                line-height: 16px;
-                letter-spacing: -1.5px;
-                text-transform: uppercase;
-                font-weight: normal;
-            }
-            .number{
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 46px;
-                letter-spacing: -1.5px;
-                text-transform: uppercase;
-            }
         }
     }
 }
