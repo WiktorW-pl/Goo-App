@@ -134,6 +134,22 @@ header{
         color: #232323;
         cursor: pointer;
     }
+    &__button-reset{
+        border: none;
+        width: 202px;
+        height: 41px;
+        background: #FFFFFF;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-style: normal;
+        font-family: Fira Code;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 16px;
+        letter-spacing: 7.5px;
+        text-transform: uppercase;
+        color: #232323;
+        cursor: pointer;
+    }
     &__input{
         margin-right: 20px;
     }
