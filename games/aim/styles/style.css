@@ -100,6 +100,20 @@ header {
   border-radius: 30px;
 }
 
+.dot {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: rgb(107, 107, 107);
+}
+
 .game-panel {
   margin: 0;
   height: 90px;
