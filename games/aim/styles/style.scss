@@ -134,6 +134,9 @@ header{
         color: #232323;
         cursor: pointer;
     }
+    &__input{
+        margin-right: 20px;
+    }
 }
 @media only screen and (max-width: 1180px){
     .logo .logo__svg{
