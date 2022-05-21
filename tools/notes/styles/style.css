@@ -2,7 +2,6 @@ body {
   background-color: #232323;
   color: #fff;
   font-family: Fira Code;
-  overflow: hidden;
 }
 
 header {
@@ -47,9 +46,10 @@ header {
 }
 
 .title {
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin: -150px 180px 0px 180px;
+  transform: translateY(-150px);
 }
 .title__icon {
   width: 121px;
@@ -65,36 +65,118 @@ header {
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: -8px;
+  letter-spacing: -4px;
   text-transform: uppercase;
-  margin-left: 20px;
 }
 
 .app {
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
+  align-content: center;
+  flex-direction: wrap;
+  transform: translateY(-110px);
 }
-
-#app__file {
-  width: 600px;
-  height: 750px;
+.app__file {
+  width: 550px;
+  height: 700px;
   resize: none;
 }
 
 .text-tools {
   border: 5px solid #fff;
-  width: 360px;
-  height: 420px;
-  transform: translateY(-650px);
+  width: 320px;
+  height: 350px;
+  padding: 5px;
   margin-left: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-tools__title {
+  transform: translateY(-20px);
 }
 
 .btn-pdf {
-  transform: translateY(-600px);
-  margin-left: 100px;
+  margin-top: 20px;
+  border: none;
+  width: 202px;
+  height: 41px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-style: normal;
+  font-family: Fira Code;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #232323;
+  cursor: pointer;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border: #232323 3px solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #707070;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1180px) {
+  .logo .logo__svg {
+    width: 50%;
+  }
+
+  .app {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .text-tools {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .title {
+    transform: translateY(-100px);
+  }
+
+  .logo .logo__svg {
+    width: 50%;
+    margin-left: 15px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .logo .logo__svg {
+    display: none;
+  }
+
+  .title {
+    transform: translateY(30px);
+  }
+
+  .app {
+    transform: translateY(30px);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .app__file {
+    width: 400px;
+  }
 }/*# sourceMappingURL=style.css.map */

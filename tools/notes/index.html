@@ -100,18 +100,24 @@
         <h1 class="title__text">Notes</h1>
     </div>
     <div class="app">
-        <textarea name="file" id="app__file" cols="30" rows="10"></textarea>
-    </div>
-    <div class="text-tools">
-            <h1 class="text-tools__title">TEXT TOOLS</h1>
-        <div class="text-tools__font-options">
-            
+        <textarea name="file" class="app__file"></textarea>
+        <div class="text-tools">
+            <div class="text-tools__font-options">
+                <h1 class="text-tools__title">TEXT TOOLS</h1>
+                <label class="text-tools__option-label">Bold <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
+                <label class="text-tools__option-label">Cursive <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
+                <label class="text-tools__option-label">Underline <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
+              <div><label class="text-tools__option-label-font">Font-size <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label></div>  
+            </div>
+            <div class="text-tools__font-color">
+                <h1 class="font-color__title">TEXT COLOR</h1>
+                <label class="text-tools__option-label">Red <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
+                <label class="text-tools__option-label">Blue <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
+                <label class="text-tools__option-label">Black <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
+            </div>
+            <button class="btn-pdf">DOWNLOAD PDF</button>
         </div>
-        <div class="text-tools__font-color">
-            <h1 class="font-color__title">TEXT COLOR</h1>
-        </div>
     </div>
-    <button class="btn-pdf">DOWNLOAD PDF</button>
     <script src="main.js"></script>
 </body>
 </html>
