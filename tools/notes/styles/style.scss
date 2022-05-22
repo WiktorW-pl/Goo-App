@@ -79,12 +79,21 @@ header{
         width: 550px;
         height: 700px;
         resize: none;
+        font-style: normal;
+        font-family: Fira Code;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 16px;
+        padding: 10px;
+        background-color: #fff;
+        color: #000;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
 .text-tools{
     border: 5px solid #fff;
     width: 320px;
-    height: 350px;
+    height: 400px;
     padding: 5px;
     margin-left: 100px;
     text-align: center;
@@ -93,9 +102,48 @@ header{
     align-items: center;
     flex-direction: column;
     &__title{
-        transform: translateY(-20px);
+        transform: translateY(-30px);
+    }
+    &__btn{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    &__file-name-input{
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+    &__label-color{
+        transform: translateY(5px);
+    }
+    &__color{
+        margin-top: 20px;
+        border: none;
+        width: 70px;
+        height: 40px;
+        background: #FFFFFF;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-style: normal;
+        font-family: Fira Code;
+        font-weight: 600;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        transform: translateY(8px);
+        color: #232323;
+        cursor: pointer;
     }
 }
+.text-tools__btn:nth-child(2){
+    font-weight: 900;
+}
+.text-tools__btn:nth-child(3){
+    font-style: italic;
+}
+.text-tools__btn:nth-child(4){
+    text-decoration: underline;
+}
+.btn-pdf-submit,
 .btn-pdf{
     margin-top: 20px;
     border: none;
@@ -109,10 +157,14 @@ header{
     font-size: 18px;
     line-height: 16px;
     letter-spacing: 2.5px;
+    text-align: center;
     text-transform: uppercase;
     color: #232323;
     cursor: pointer;
 }
+.btn-pdf-submit{
+    margin-top: 20px;
+} 
 a{
     text-decoration: none;
     color: #fff;

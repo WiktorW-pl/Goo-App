@@ -100,24 +100,24 @@
         <h1 class="title__text">Notes</h1>
     </div>
     <div class="app">
-        <textarea name="file" class="app__file"></textarea>
+        <div id="content" name="file" contenteditable="true" class="app__file" spellcheck="false"></div>
         <div class="text-tools">
             <div class="text-tools__font-options">
                 <h1 class="text-tools__title">TEXT TOOLS</h1>
-                <label class="text-tools__option-label">Bold <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
-                <label class="text-tools__option-label">Cursive <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
-                <label class="text-tools__option-label">Underline <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
-              <div><label class="text-tools__option-label-font">Font-size <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label></div>  
-            </div>
-            <div class="text-tools__font-color">
-                <h1 class="font-color__title">TEXT COLOR</h1>
-                <label class="text-tools__option-label">Red <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
-                <label class="text-tools__option-label">Blue <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
-                <label class="text-tools__option-label">Black <input class="text-tools__option-checkbox" name="difficulty" type="checkbox"></label>
-            </div>
-            <button class="btn-pdf">DOWNLOAD PDF</button>
+                <button class="text-tools__btn" id="bold-btn">B</button>
+                <button class="text-tools__btn" id="italic-btn">I</button>
+                <button class="text-tools__btn" id="underline-btn">U</button>
+                <div><label class="text-tools__file-name-label">File name<input class="text-tools__file-name-input"  type="input"></label></div>  
+                <label><input class="text-tools__color" type="color" spellcheck="false" id="color-btn" id="underline-btn"></label>
+            <select class="btn-pdf" name="download"> 
+                <option value="pdf" name="download" id="new-btn">New</option>
+                <option value="pdf" name="download" id="pdf-btn">Download PDF</option>
+                <option value="txt" name="download" id="txt-btn">Download TXT</option>
+            </select>
+            <button class="btn-pdf-submit" type="submit" name="download">Submit</button>
         </div>
     </div>
-    <script src="main.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
