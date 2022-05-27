@@ -1,0 +1,74 @@
+$main-color: #232323;
+body{
+    background-color: #232323;
+    color: #fff;
+    font-family: Fira Code;
+    // overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border: #232323 3px solid;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+    cursor: pointer;
+}
+.logo .logo__svg{
+    width: 70%;
+    margin-left: 15px;
+}
+.nav-list{
+    max-width: 100%;
+    list-style: none;
+    display: flex;
+    height: 80px;
+    transform: translateY(-65px);
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    z-index: 100;
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+     &__element{
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+        font-size: 18px;
+        line-height: 46px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    &__element:hover{
+        background-color: #ffffff;
+        a:hover{
+            color: $main-color;
+        }
+
+    }
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+.grid div{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
