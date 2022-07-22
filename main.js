@@ -1,3 +1,6 @@
+const notesBtn = document.querySelector('#go-to-notes');
+const todoBtn = document.querySelector('#go-to-todo');
+
 const hamburger = document.querySelector('.hamburger');
 const hamburgerNav = document.querySelector('.hamburger-navigation');
 const handleClick = () =>{
@@ -6,6 +9,14 @@ const handleClick = () =>{
 }
 
 hamburger.addEventListener('click', handleClick)
+
+todoBtn.addEventListener('click', ()=>{
+  window.location.href = "./tools/todo/todo.html";
+})
+
+notesBtn.addEventListener('click', ()=>{
+  window.location.href = "./tools/notes/index.html";
+})
 
 
 pageTransition = () => {

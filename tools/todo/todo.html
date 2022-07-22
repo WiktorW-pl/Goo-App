@@ -12,7 +12,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <title>Goo App</title>
 </head>
-<body>
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="home-section">
     <header>
         <div class="logo">
             <svg width="365" height="156" viewBox="0 0 365 156" fill="none" class="logo logo__svg" xmlns="http://www.w3.org/2000/svg">
@@ -79,8 +80,8 @@
             </ul>
         </nav>
     </header>
-    <div class="wrapper">
-    <div class="content-todo" data-router-view="home">
+    <div class="content">
+    <div class="content content-todo" data-router-view="home">
        <span class="content__icon">
            <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_i_12_253)">
@@ -158,6 +159,8 @@
         <button class="add-note">Add side note</button>
         <button class="remove-note">Remove side note</button>
     </div>
+    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
