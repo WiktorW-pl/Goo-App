@@ -216,12 +216,10 @@ a {
   .logo .logo__svg {
     width: 50%;
   }
-
   .app {
     align-items: center;
     flex-direction: column;
   }
-
   .text-tools {
     margin-left: 0px;
     margin-top: 50px;
@@ -231,7 +229,6 @@ a {
   .title {
     transform: translateY(-100px);
   }
-
   .logo .logo__svg {
     width: 50%;
     margin-left: 15px;
@@ -241,11 +238,9 @@ a {
   .logo .logo__svg {
     display: none;
   }
-
   .title {
     transform: translateY(30px);
   }
-
   .app {
     transform: translateY(30px);
   }

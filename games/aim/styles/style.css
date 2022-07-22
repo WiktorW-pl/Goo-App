@@ -166,7 +166,6 @@ header {
   .logo .logo__svg {
     display: none;
   }
-
   .content {
     transform: translateY(2%);
   }
@@ -195,11 +194,9 @@ header {
     text-transform: uppercase;
     margin-left: 20px;
   }
-
   .content {
     transform: translateY(10%);
   }
-
   .app {
     margin: 0;
     height: 650px;
@@ -208,7 +205,6 @@ header {
     border: 7px solid #fff;
     border-radius: 30px;
   }
-
   .game-panel {
     margin: 0;
     height: auto;

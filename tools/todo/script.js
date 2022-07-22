@@ -38,6 +38,7 @@ const buildTask = () =>{
         taskContainer.appendChild(input);
         input.classList.add('task__input');
         user.textarea.push(input);
+        window.localStorage.getItem('zadanie', input);
 
     const color = document.createElement('div');
         taskContainer.appendChild(color);

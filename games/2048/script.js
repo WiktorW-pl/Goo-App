@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
     }
     createBoard();
 
-    // genereator
     function generate(){
         let randomNumber = Math.floor(Math.random() * squares.length)
         if ()

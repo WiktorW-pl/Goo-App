@@ -280,7 +280,6 @@ a {
     width: 80%;
     margin-left: 15px;
   }
-
   .content-todo {
     max-width: 100%;
     display: flex;
@@ -290,7 +289,6 @@ a {
     text-align: center;
     transform: translateY(-130px);
   }
-
   .app-todo {
     width: 600px;
     height: 650px;
@@ -301,19 +299,16 @@ a {
     flex-wrap: nowrap;
     flex-direction: column;
   }
-
   .side-note-panel {
     width: 300px;
     position: absolute;
     bottom: 20px;
   }
-
   .add-note {
     width: 180px;
     height: 40px;
     margin-bottom: 20px;
   }
-
   .remove-note {
     width: 200px;
     height: 40px;
@@ -324,7 +319,6 @@ a {
     width: 50%;
     margin-left: 15px;
   }
-
   .remove-note {
     width: 170px;
     height: 40px;
@@ -337,15 +331,12 @@ a {
   .logo .logo__svg {
     width: 40%;
   }
-
   .content-todo {
     transform: translateY(-60px);
   }
-
   .side-note-panel {
     display: none;
   }
-
   .add-note {
     width: 150px;
     height: 40px;
@@ -354,7 +345,6 @@ a {
     line-height: 1px;
     letter-spacing: 0.2px;
   }
-
   .remove-note {
     width: 170px;
     height: 40px;
@@ -362,7 +352,6 @@ a {
     line-height: 1px;
     letter-spacing: 0.2px;
   }
-
   .note {
     top: 1000px;
   }
@@ -372,15 +361,12 @@ a {
     width: 40%;
     display: none;
   }
-
   .content-todo {
     transform: translateY(80px);
   }
-
   .side-note-panel {
     display: none;
   }
-
   .add-note {
     width: 150px;
     height: 40px;
@@ -389,7 +375,6 @@ a {
     line-height: 1px;
     letter-spacing: 0.2px;
   }
-
   .remove-note {
     width: 170px;
     height: 40px;
@@ -397,7 +382,6 @@ a {
     line-height: 1px;
     letter-spacing: 0.2px;
   }
-
   .app-todo {
     width: 500px;
   }
@@ -407,15 +391,12 @@ a {
     width: 40%;
     display: none;
   }
-
   .content-todo {
     transform: translateY(80px);
   }
-
   .side-note-panel {
     display: none;
   }
-
   .add-note {
     width: 150px;
     height: 40px;
@@ -424,7 +405,6 @@ a {
     line-height: 1px;
     letter-spacing: 0.2px;
   }
-
   .remove-note {
     width: 170px;
     height: 40px;
@@ -432,11 +412,9 @@ a {
     line-height: 1px;
     letter-spacing: 0.2px;
   }
-
   .app-todo {
     width: 300px;
   }
-
   .buttons {
     min-width: 150px;
   }

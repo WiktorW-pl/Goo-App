@@ -1,77 +1,69 @@
-const tl = gsap.timeline();
-const contentTools = document.querySelector('.content');
-const contentGames = document.querySelector('.content-games');
-const contentInfo = document.querySelector('.content-info');
-const btnToGames = document.querySelector('#games-button');
-const btnToTools = document.querySelector('#tools-button');
-const btnToInfo = document.querySelector('#info-button');
-
-const hamburgerToTools = document.querySelector('.tools-hamburger');
-const hamburgerToGames = document.querySelector('.games-hamburger');
-const hamburgerToInfo = document.querySelector('.info-hamburger');
-
 const hamburger = document.querySelector('.hamburger');
 const hamburgerNav = document.querySelector('.hamburger-navigation');
 const handleClick = () =>{
     hamburger.classList.toggle('hamburger--active');
     hamburgerNav.classList.toggle('hamburger-navigation--active');
 }
+
 hamburger.addEventListener('click', handleClick)
 
-const loadAnimation = () => {
-    tl.fromTo(contentTools, {opacity: 0}, {opacity: 1, duration: 0.5});
-    contentGames.style.display = "none";
-    contentInfo.style.display = "none";
-}
-loadAnimation()
 
-let currentView = "tools";
-const navigateToGames = () =>{
-    btnToGames.classList.add('nav-list__element--active');
-    if(currentView === "tools"){
-        btnToTools.classList.remove('nav-list__element--active');
-        tl.fromTo(contentTools, {opacity: 1}, {opacity: 0, display: "none", duration: 0.5});
-    }
-    else if(currentView === "info"){
-        btnToInfo.classList.remove('nav-list__element--active');
-        tl.fromTo(contentInfo, {opacity: 1}, {opacity: 0, display: "none", duration: 0.5});
-    }
-    tl.fromTo(contentGames, {opacity: 0}, {opacity: 1, display: "flex", duration: 0.5});
-    currentView = "games";
+pageTransition = () => {
+  var timeline = gsap.timeline();
+
+  timeline.to(".content", {
+    y: 1000, 
+    duration: 1
+  });
+
 }
 
-const navigateToTools = () =>{
-    btnToTools.classList.add('nav-list__element--active');
-    if(currentView === "games"){
-        btnToGames.classList.remove('nav-list__element--active');
-        tl.fromTo(contentGames, {opacity: 1}, {opacity: 0, display: "none", duration: 0.5});
-    }
-    else if(currentView === "info"){
-        btnToInfo.classList.remove('nav-list__element--active');
-        tl.fromTo(contentInfo, {opacity: 1}, {opacity: 0, display: "none", duration: 0.5});
-    }
-    tl.fromTo(contentTools, {opacity: 0}, {opacity: 1, display: "flex", duration: 0.5});
-    currentView = "tools";
+mainAnimation = () => {
+  var timeline = gsap.timeline();
+  
+  timeline.from(".content", {
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      stagger: {
+          amount: .4
+      },
+      delay: .8
+  });
 }
 
-const navigateToInfo = () =>{
-    btnToInfo.classList.add('nav-list__element--active');
-    if(currentView === "games"){
-        btnToGames.classList.remove('nav-list__element--active');
-        tl.fromTo(contentGames, {opacity: 1}, {opacity: 0, display: "none", duration: 0.5});
-    }
-    else if(currentView === "tools"){
-        btnToTools.classList.remove('nav-list__element--active');
-        tl.fromTo(contentTools, {opacity: 1}, {opacity: 0, display: "none", duration: 0.5});
-    }
-    tl.fromTo(contentInfo, {opacity: 0}, {opacity: 1, display: "flex", duration: 0.5});
-    currentView = "info";
+delay = (n) => {
+  n = n || 2000;
+  return new Promise((done)=> {
+      setTimeout(()=> {
+          done();
+      }, n);
+  })
 }
 
-btnToGames.addEventListener('click', navigateToGames);
-btnToTools.addEventListener('click', navigateToTools);
-btnToInfo.addEventListener('click', navigateToInfo);
+barba.init({
+  sync: true,
+  transitions: [
+      {
+          async leave(data){
+              const done = this.async();
+              pageTransition();
+              await delay(1000);
+              done();
+          },
 
-hamburgerToTools.addEventListener('click', navigateToTools);
-hamburgerToGames.addEventListener('click', navigateToGames);
-hamburgerToInfo.addEventListener('click', navigateToInfo);
+          async enter (data){
+              mainAnimation();
+          },
+
+          async once(data){
+              mainAnimation();
+          }
+      }
+  ]
+});
+
+
+
+
+

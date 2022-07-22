@@ -232,7 +232,6 @@ a {
   .logo .logo__svg {
     display: none;
   }
-
   .title {
     margin: -150px 180px 10px 180px;
   }
@@ -252,7 +251,6 @@ a {
     left: 50%;
     transform: translate(-50%, -39%);
   }
-
   .title {
     display: flex;
     justify-content: center;
@@ -275,7 +273,6 @@ a {
     text-transform: uppercase;
     margin-left: 20px;
   }
-
   .app {
     display: flex;
     justify-content: center;
@@ -328,7 +325,6 @@ a {
     background-color: #666666;
     color: #fff;
   }
-
   .statistics {
     display: flex;
     justify-content: center;
@@ -399,7 +395,6 @@ a {
     left: 50%;
     transform: translate(-50%, -25%);
   }
-
   .title {
     display: flex;
     justify-content: center;
@@ -422,7 +417,6 @@ a {
     text-transform: uppercase;
     margin-left: 20px;
   }
-
   .app {
     display: flex;
     justify-content: center;
@@ -475,7 +469,6 @@ a {
     background-color: #666666;
     color: #fff;
   }
-
   .statistics {
     display: flex;
     flex-direction: column;
@@ -549,7 +542,6 @@ a {
     left: 50%;
     transform: translate(-50%, -5%);
   }
-
   .title {
     display: flex;
     justify-content: center;
@@ -575,7 +567,6 @@ a {
     margin-left: 20px;
     display: none;
   }
-
   .app {
     display: flex;
     justify-content: center;
@@ -611,7 +602,6 @@ a {
   .app .btn {
     top: 110px;
   }
-
   .statistics {
     display: flex;
     flex-direction: column;
