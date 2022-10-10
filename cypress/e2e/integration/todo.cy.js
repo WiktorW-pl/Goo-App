@@ -2,7 +2,7 @@ describe('Todo app test', () => {
 
     beforeEach(()=>{
       cy.visit('https://admiring-aryabhata-bb43d5.netlify.app/');
-      cy.waitForAnimation();
+      cy.wait(4000) //wait until animation ends
       cy.get('#go-to-todo').click();
     })
     
@@ -33,7 +33,7 @@ describe('Todo app test', () => {
             .should('not.exist');
 
         cy.get('a[href="../../index.html"]').click()
-        cy.waitForAnimation();
+        cy.wait(4000) //wait until animation ends
         cy.get('.app__title').contains('TO-DO')
             .should('be.visible');
     })

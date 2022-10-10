@@ -7,19 +7,19 @@ describe('Navigation test', () => {
   it('Navigation should change aplication container', () => {
 
     cy.get('#games-button').click();
-    cy.waitForAnimation();
+    cy.wait(4000) //wait until animation ends
 
     cy.get('.app__title').contains('AIM TRAINER').should('be.visible');
     cy.get('.app__title').contains('PAPER, SCISSORS, ROCK').should('be.visible');
     cy.get('.app__title').contains('TIC-TAC-TOE').should('be.visible');
 
     cy.get('#info-button').click();
-    cy.waitForAnimation();
+    cy.wait(4000) //wait until animation ends 
 
     cy.get('#info').should('be.visible')
 
     cy.get('#tools-button').click();
-    cy.waitForAnimation();
+    cy.wait(4000) //wait until animation ends  
 
     cy.get('.app__title').contains('TO-DO').should('be.visible');
     cy.get('.app__title').contains('Notes').should('be.visible');
