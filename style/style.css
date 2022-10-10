@@ -371,6 +371,50 @@ a {
   }
 }
 @media only screen and (max-width: 1300px) {
+  /* fixes */
+  .logo{
+    width: 20%;
+    margin: 0;
+    transform: translateY(-10px);
+  }
+  .content{
+    max-height: 90vh;
+  } 
+  #main-app{
+    transform: translateY(-90px);
+    height: 500px;
+  }
+  #sub-app{
+    transform: translateY(-90px);
+    height: 400px;
+  }
+  .app__text{
+    font-size: 13px;
+    margin-top: 100px;
+    padding: 20px;
+  }
+  .app__button{
+    transform: translateY(-40px);
+  }
+  #content-games{
+    max-height: 90vh;
+  }
+  #logo-games{
+    width: 20%;
+    margin: 0;
+    transform: translateY(-10px);
+  }
+  #info{
+    height: 50vh;
+  }
+  #info-logo{
+    transform: translateY(-50px);
+  }
+  #info-text{
+    font-size: 20px;
+    transform: translateY(-40px)
+  }
+  /* fixes */
   .content-info {
     height: 500px;
     width: 900px;

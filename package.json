@@ -1,0 +1,11 @@
+{
+  "name": "goo-app-main",
+  "version": "1.0.0",
+  "description": "> Live: https://admiring-aryabhata-bb43d5.netlify.app/  ## Site contains: | Games                 | Tools       |  | :---                  |    :----:   |      | Aim-Trainer           | To-do       |  | Space-Invaders        | Notes       |  | Rock-paper-scissors   | Calculator  |",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
