@@ -85,10 +85,10 @@
     </div>
     <div class="app">
         <div class="app-container">
-            <div class="app__option"><img src="img/rock.png" alt="rock" class="option__img"></div>
-            <div class="app__option"><img src="img/paper.png" alt="paper" class="option__img"></div>
-            <div class="app__option"><img src="img/scissors.png" alt="scissors" class="option__img scissors"></div>
-            <button class="btn">Play!</button>
+            <div class="app__option"><img src="img/rock.png" alt="rock" class="option__img" data-cy="option-rock"></div>
+            <div class="app__option"><img src="img/paper.png" alt="paper" class="option__img" data-cy="option-paper"></div>
+            <div class="app__option"><img src="img/scissors.png" alt="scissors" class="option__img scissors" data-cy="option-scissors"></div>
+            <button class="btn" data-cy="play-btn">Play!</button>
         </div>
     </div>
     <div class="statistics">
@@ -100,7 +100,7 @@
         </div>
         <div class="statistics__stats stats">
             <h1 class="stats__title">Statistics</h1>
-            <h2 class="stats__number-of-games number">Number of games played:</h2>
+            <h2 class="stats__number-of-games number" data-cy="number-of-games">Number of games played:</h2>
             <h2 class="stats__number-of-wins number">Number of games wins:</h2>
             <h2 class="stats__number-of-losses number">Number of games losses:</h2>
             <h2 class="stats__number-of-draws number">Number of games draws:</h2>

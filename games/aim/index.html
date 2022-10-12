@@ -71,7 +71,7 @@
     </div>
     <nav>
         <ul class="nav-list">
-            <li class="nav-list__element"><a href="../../index.html">Back to main page</a></li>       
+            <li class="nav-list__element"><a href="../../index.html" data-cy="back-to-main">Back to main page</a></li>       
         </ul>
     </nav>
 </header>
@@ -85,14 +85,14 @@
 
         </div>
         <div class="game-panel">
-            <button class="game-panel__button-reset" id="reset">Reset</button>
-            <button class="game-panel__button">Play!</button>
-            <p class="game-panel__item" id="timer">Time: 00:00</p>
-            <p class="game-panel__item" id="score">Score</p>
+            <button class="game-panel__button-reset" id="reset" data-cy="reset-btn">Reset</button>
+            <button class="game-panel__button" data-cy="play-btn">Play!</button>
+            <p class="game-panel__item" id="timer" data-cy="time">Time: 00:00</p>
+            <p class="game-panel__item" id="score" data-cy="score">Score</p>
             <label class="game-panel__item">Difficulty</label>
-            <label class="game-panel__item">Easy <input class="game-panel__input" name="difficulty" type="radio"></label>
-            <label class="game-panel__item">Medium <input class="game-panel__input" name="difficulty" type="radio"></label>
-            <label class="game-panel__item">Hard <input class="game-panel__input" name="difficulty" type="radio"></label>
+            <label class="game-panel__item">Easy <input class="game-panel__input" name="difficulty" type="radio" data-cy="difficulty-easy"></label>
+            <label class="game-panel__item">Medium <input class="game-panel__input" name="difficulty" type="radio" data-cy="difficulty-medium"></label>
+            <label class="game-panel__item">Hard <input class="game-panel__input" name="difficulty" type="radio" data-cy="difficulty-hard"></label>
         </div>
     </div>
     <script src="script.js"></script>
