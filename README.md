@@ -112,7 +112,7 @@ I decided to use cypress to do e2e test for every app in my project.
 ## Getting Started
 
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple  steps.
 
 
 1. Clone the repo
