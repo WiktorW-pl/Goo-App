@@ -108,10 +108,12 @@ Technologies that I used in this project:
 I decided to use cypress to do e2e test for every app in my project. 
 <br />
 <br />
+![cypress-raport-screenshot]
  You can find all CI results recorded on the 
 <br/> [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/nhnmta/runs/1/overview)
 <br/>
 https://dashboard.cypress.io/projects/nhnmta/runs/1/overview
+
 
 
 <br />
@@ -169,6 +171,7 @@ Project Link: [https://github.com/WiktorW-pl/Goo-App](https://github.com/WiktorW
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/wiktor-wo%C5%BAny-562708237/
 [product-screenshot]: images/screenshot.png
+[cypress-raport-screenshot]: images/cypress-raport-gooapp.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
