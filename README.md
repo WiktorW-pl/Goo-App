@@ -107,8 +107,11 @@ Technologies that I used in this project:
 
 I decided to use cypress to do e2e test for every app in my project. 
 <br />
-> You can find all CI results recorded on the 
+<br />
+ You can find all CI results recorded on the 
 <br/> [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/nhnmta/runs/1/overview)
+<br/>
+https://dashboard.cypress.io/projects/nhnmta/runs/1/overview
 
 
 <br />
