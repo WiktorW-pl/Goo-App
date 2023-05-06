@@ -7,9 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/img/main-logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" href="./img/main-logo.png">
     <link rel="stylesheet" href="style/style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <title>Goo App</title>
 </head>
 <body data-barba="wrapper">
@@ -75,92 +76,35 @@
                 
         </div>
         <nav>
+            <button class="hamburger">
+                <span class="hamburger__box">
+                    <span class="hamburger__inner"></span>
+                </span>
+            </button>
+            <div class="hamburger-navigation">
+             <ul class="hamburger-list">
+                 <li class="hamburger-list__item"><a href="index.html" class="tools-hamburger">Tools</a></li>
+                 <li class="hamburger-list__item"><a href="games.html" class="games-hamburger">Games</a></li>
+                 <li class="hamburger-list__item"><a href="info.html" class="info-hamburger">Information</a></li>
+             </ul>
+            </div>
             <ul class="nav-list">
-                <li class="nav-list__element"><a href="../../index.html" data-cy="back-to-main-page-btn">Back to main page</a></li>       
+                <li class="nav-list__element" id="tools-button"><a class="nav-list__link" href="index.html">Tools</a></li>
+                <li class="nav-list__element" id="games-button"><a class="nav-list__link" href="games.html">Games</a></li>
+                <li class="nav-list__element nav-list__element--active" id="info-button"><a href="info.html" class="nav-list__link nav-list__link--active">Information</a></li>
             </ul>
         </nav>
     </header>
-    <div class="content">
-    <div class="content content-todo" data-router-view="home">
-       <span class="content__icon">
-           <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_i_12_253)">
-            <path d="M78.3334 11.75H74.4167V3.91669H66.5834V11.75H27.4167V3.91669H19.5834V11.75H15.6667C11.3584 11.75 7.83337 15.275 7.83337 19.5834V82.25C7.83337 86.5583 11.3584 90.0834 15.6667 90.0834H78.3334C82.6417 90.0834 86.1667 86.5583 86.1667 82.25V19.5834C86.1667 15.275 82.6417 11.75 78.3334 11.75ZM78.3334 82.25H15.6667V31.3334H78.3334V82.25Z" fill="white"/>
-            </g>
-            <defs>
-            <filter id="filter0_i_12_253" x="0" y="0" width="94" height="98" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dy="4"/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_253"/>
-            </filter>
-            </defs>
-        </svg>
-            <h1 class="content__title">TO-DO</h1>
-        </span> 
-        <h2 class="info"></h2>
-        <div class="app-todo" style="overflow-y: scroll; overflow-x: hidden;">
-            <!-- <div class="task">
-               <textarea  class="task__input" placeholder="">dsadas</textarea><div id="color"></div>
-               <input class="task__checkbox" type="checkbox" name="" id=""> 
-            </div>  -->
-             <!-- 
-            <div class="task">
-               <input class="task__input" type="text"><input class="task__checkbox" type="checkbox" name="" id="">
-            </div> -->
+    <div class="content content-info" id="info" data-cy="info">
+        <h1 class="title-info">Information</h1>
+        <div class="container-info">
+            <img class="content-info__logo" id="info-logo" src="img/main-logo-fully.png" alt="">
+            <p class="content-info__text" id="info-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eaque nobis eum, 
+             dolore necessitatibus quasi id natus voluptatum dolorum temporibus voluptate maiores assumenda. </p>
         </div>
-        <div class="buttons">      
-            <div class="add-btn">
-                <svg id="button-add" data-cy="button-add" width="51" height="51" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_i_12_268)">
-                    <path d="M33.0417 17.7917H27.9584V27.9584H17.7917V33.0417H27.9584V43.2084H33.0417V33.0417H43.2084V27.9584H33.0417V17.7917ZM30.5 5.08337C16.47 5.08337 5.08337 16.47 5.08337 30.5C5.08337 44.53 16.47 55.9167 30.5 55.9167C44.53 55.9167 55.9167 44.53 55.9167 30.5C55.9167 16.47 44.53 5.08337 30.5 5.08337ZM30.5 50.8334C19.2913 50.8334 10.1667 41.7088 10.1667 30.5C10.1667 19.2913 19.2913 10.1667 30.5 10.1667C41.7088 10.1667 50.8334 19.2913 50.8334 30.5C50.8334 41.7088 41.7088 50.8334 30.5 50.8334Z" fill="white"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_i_12_268" x="0" y="0" width="61" height="65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="4"/>
-                    <feGaussianBlur stdDeviation="2"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_268"/>
-                    </filter>
-                    </defs>
-                </svg>      
-            </div>
-            <div class="remove-btn">
-                    <svg id="button-remove" data-cy="button-remove" width="35" height="39" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_i_12_271)">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.0317 7.13453C38.8875 7.13453 39.6 7.84512 39.6 8.74931V9.5853C39.6 10.4675 38.8875 11.2001 38.0317 11.2001H1.57048C0.712492 11.2001 0 10.4675 0 9.5853V8.74931C0 7.84512 0.712492 7.13453 1.57048 7.13453H7.98504C9.28807 7.13453 10.4221 6.20834 10.7152 4.90155L11.0511 3.40117C11.5732 1.35739 13.2913 0 15.2576 0H24.3424C26.2873 0 28.0247 1.35739 28.5275 3.29337L28.8869 4.89935C29.1779 6.20834 30.3119 7.13453 31.6171 7.13453H38.0317ZM34.7729 37.6949C35.4426 31.4535 36.6151 16.6257 36.6151 16.4761C36.6579 16.0229 36.5102 15.5939 36.2171 15.2485C35.9026 14.9251 35.5046 14.7337 35.066 14.7337H4.55079C4.11003 14.7337 3.69066 14.9251 3.39967 15.2485C3.10441 15.5939 2.95891 16.0229 2.98031 16.4761C2.98424 16.5036 3.02631 17.0259 3.09665 17.8991C3.40912 21.7783 4.27941 32.5824 4.84177 37.6949C5.23974 41.4613 7.711 43.8284 11.2906 43.9142C14.0528 43.978 16.8985 44 19.8084 44C22.5492 44 25.3329 43.978 28.1807 43.9142C31.8844 43.8504 34.3535 41.525 34.7729 37.6949Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <filter id="filter0_i_12_271" x="0" y="0" width="39.6" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                        <feOffset dy="4"/>
-                        <feGaussianBlur stdDeviation="2"/>
-                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_271"/>
-                        </filter>
-                        </defs>
-                    </svg>
-            </div>
-        </div>
-    </div>
-</div>
-    <div class="side-note-panel">
-        <button class="add-note">Add side note</button>
-        <button class="remove-note">Remove side note</button>
-    </div>
     </div>
     </main>
-    <script src="script.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>

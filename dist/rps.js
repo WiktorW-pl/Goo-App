@@ -1,67 +1,84 @@
-"use strict";
-const option = Array.from([...document.querySelectorAll(".option")]);
-const btn = document.querySelector('button');
-const gamesDisplay = document.querySelector('#games');
-const winsDisplay = document.querySelector('#wins');
-const lossesDisplay = document.querySelector('#losess');
-const drawsDisplay = document.querySelector('#draws');
-const playerPickDisplay = document.querySelector('#player-pick');
-const aiPickDisplay = document.querySelector('#ai-pick');
-const winnerDisplay = document.querySelector('#winner');
-const gameProps = {
-    playerPick: '',
-    aiPick: '',
-    games: 0,
-    wins: 0,
-    losses: 0,
-    draws: 0,
-    winner: ''
-};
-const ai = () => {
-    const aiChoice = Math.floor(Math.random() * 3);
-    gameProps.aiPick = option[aiChoice].getAttribute('alt');
-};
-option.forEach((item) => {
-    item.addEventListener('click', () => {
-        for (let picked of option) {
-            picked.style.backgroundColor = 'red';
+const btn = document.querySelector('.btn');
+const backgroundForOption = [...document.querySelectorAll('.app__option')];
+const userOption = [...document.querySelectorAll('.option__img')];
+const [rock, paper, scissors] = userOption;
+const displayScorePlayerOption = document.querySelector('.summary__player-selection')
+const displayScoreAiOption = document.querySelector('.summary__computer-selection')
+const displayScoreWinner = document.querySelector('.summary__game-winner')
+const displayScoreGamesNumber = document.querySelector('.stats__number-of-games')
+const displayScoreNumberOfWins = document.querySelector('.stats__number-of-wins')
+const displayScoreNumberOfLoses = document.querySelector('.stats__number-of-losses')
+const displayScoreNumberOfDraws = document.querySelector('.stats__number-of-draws')
+
+const score = {
+    numberOfGames: 0,
+    numberOfWins: 0,
+    numberOfLoses: 0,
+    numberOfDraws: 0,
+}
+const gamePanel = {
+    playerChoice:'',
+    aiChoice: ' ',
+    winner: ' ',
+}
+
+userOption.forEach(item => item.addEventListener('click', (e)=>{
+    backgroundForOption.forEach(item => item.addEventListener('click', (e)=>{
+        for (one of backgroundForOption ){
+            one.classList.remove('taken')
         }
-        item.style.backgroundColor = 'green';
-        gameProps.playerPick = item.getAttribute('alt');
-    });
-});
-const compareSelection = () => {
-    gameProps.games++;
-    if (gameProps.playerPick === '') {
-        gameProps.games--;
-        alert('Wybierz łapkę mordko');
-        return;
+        item.classList.add('taken');
+    }))
+    for (one of userOption ){
+        one.classList.remove('chosen');
     }
-    if (gameProps.playerPick === gameProps.aiPick) {
-        gameProps.draws++;
-        gameProps.winner = "Nobody :(";
+    item.classList.add('chosen');
+    if(item.classList.contains('chosen')){
+        gamePanel.playerChoice = item;
     }
-    if (gameProps.playerPick === 'Rock' && gameProps.aiPick === 'Paper' || gameProps.playerPick === 'Paper' && gameProps.aiPick === 'Scissors' || gameProps.playerPick === 'Scissors' && gameProps.aiPick === 'Rock') {
-        gameProps.losses++;
-        gameProps.winner = "Computer";
+}))
+
+const ai = () =>{
+    const index = Math.floor(Math.random() * userOption.length);
+    const computer = userOption[index];
+    gamePanel.aiChoice = computer;
+}
+
+const checkWinner = () =>{
+    score.numberOfGames++;
+    if(gamePanel.playerChoice === ''){
+        score.numberOfGames--;
+        alert('Wybierz łapkę mordko')
+         return;
+    } 
+    if(gamePanel.playerChoice === gamePanel.aiChoice){
+        score.numberOfDraws++;
+        gamePanel.winner = "Nobody :("
     }
-    if (gameProps.playerPick === 'Rock' && gameProps.aiPick === 'Scissors' || gameProps.playerPick === 'Paper' && gameProps.aiPick === 'Rock' || gameProps.playerPick === 'Scissors' && gameProps.aiPick === 'Paper') {
-        gameProps.wins++;
-        gameProps.winner = "You!";
+    if(gamePanel.playerChoice === rock && gamePanel.aiChoice === paper || gamePanel.playerChoice === paper && gamePanel.aiChoice === scissors || gamePanel.playerChoice === scissors && gamePanel.aiChoice === rock){
+        score.numberOfLoses++;
+        gamePanel.winner = "Computer"
     }
-};
-const displayStats = () => {
-    gamesDisplay && (gamesDisplay.textContent = gameProps.winner);
-    winsDisplay && (winsDisplay.textContent = gameProps.wins.toString());
-    lossesDisplay && (lossesDisplay.textContent = gameProps.losses.toString());
-    drawsDisplay && (drawsDisplay.textContent = gameProps.draws.toString());
-    playerPickDisplay && (playerPickDisplay.textContent = gameProps.playerPick);
-    aiPickDisplay && (aiPickDisplay.textContent = gameProps.aiPick);
-    winnerDisplay && (winnerDisplay.textContent = gameProps.winner);
-};
-const startGame = () => {
+    if(gamePanel.playerChoice === rock && gamePanel.aiChoice === scissors || gamePanel.playerChoice === paper && gamePanel.aiChoice === rock || gamePanel.playerChoice === scissors && gamePanel.aiChoice === paper){
+        score.numberOfWins++;
+        gamePanel.winner = "You!"
+    }
+}
+const startGame = () =>{
     ai();
-    compareSelection();
-    displayStats();
-};
-btn === null || btn === void 0 ? void 0 : btn.addEventListener('click', startGame);
+    checkWinner();
+    summary();
+}
+
+const summary = () =>{
+    displayScoreGamesNumber.textContent = `Number of games played: ${score.numberOfGames}`;
+    displayScoreNumberOfDraws.textContent = `Number of games draws: ${score.numberOfDraws}`;
+    displayScoreNumberOfWins.textContent = `Number of games wins: ${score.numberOfWins}`;
+    displayScoreNumberOfLoses.textContent = `Number of games losses: ${score.numberOfLoses}`;
+
+    displayScoreWinner.textContent = `Game winner: ${gamePanel.winner}`;
+    displayScorePlayerOption.textContent = `Player's choice: ${gamePanel.playerChoice.alt}`;
+    displayScoreAiOption.textContent = `Computer's choice: ${gamePanel.aiChoice.alt}`;
+}
+
+btn.addEventListener('click', startGame);
